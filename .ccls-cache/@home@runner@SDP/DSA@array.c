@@ -1,4 +1,4 @@
-/*#include <stdio.h>
+#include <stdio.h>
 int main()
 {
   int arr[3][4];
@@ -9,4 +9,4 @@ int main()
           scanf("%d",&arr[i][j]);
         }
     }
-}*/
+}
