@@ -1,16 +1,21 @@
+#include <math.h>
 #include <stdio.h>
 
 int main() {
-int n,dig,temp=0,pos=0;
-scanf("%d",&n);
-while(n>0){
-  dig=n%10;
-  if(dig==0){
-    dig=1;
+  int n, dig, result = 0, place = 1;
+
+  scanf("%d", &n);
+
+  while (n > 0) {
+    dig = n % 10; // Extract the last digit
+    if (dig == 0) {
+      dig = 1; // Replace 0 with 1
+    }
+    result = result + dig * place; // Construct the new number
+    place = place * 10;            // Move to the next place value
+    n /= 10;                       // Remove the last digit
   }
-  temp=temp*10+dig;
-  n=n/10;
-}
-printf("%d",temp);
-  
+
+  printf("%d\n", result);
+  return 0;
 }
